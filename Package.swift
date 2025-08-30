@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/SnapKit/SnapKit.git", .branch("master"))
+        .package(url: "https://github.com/SnapKit/SnapKit.git", .branch("main"))
     ],
     targets: [
         .target(
