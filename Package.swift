@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "FWPopupView",
     platforms: [
-        .iOS(.v8)
+        .iOS(.v11)
     ],
     products: [
         .library(
@@ -13,7 +13,9 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/SnapKit/SnapKit.git", .branch("main"))
+        .package(
+            url: "https://github.com/SnapKit/SnapKit.git", .upToNextMajor(from: "5.7.1")
+        )
     ],
     targets: [
         .target(
@@ -22,8 +24,7 @@ let package = Package(
             path: "FWPopupView",
             resources: [
                 .process("Resources/FWPopupView.bundle")
-            ],
-            publicHeadersPath: ""
+            ]
         )
     ]
 )
